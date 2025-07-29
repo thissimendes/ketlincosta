@@ -1,15 +1,31 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ketlin Costa</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyDUJJ9IUjO3oJ-CJRmrUQvvv7PDkrtQkl0",
+      authDomain: "ketlincosta-a1ba5.firebaseapp.com",
+      projectId: "ketlincosta-a1ba5",
+      storageBucket: "ketlincosta-a1ba5.appspot.com",
+      messagingSenderId: "807548846644",
+      appId: "1:807548846644:web:3800c8eecf4d3edba40061"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
 </head>
 <body>
   <div class="container">
     <h1 class="title">Ketlin Costa</h1>
-
     <div class="actions">
       <button class="btn" onclick="abrirCadastroCompleto()">Cadastrar Cliente + Evento</button>
       <button class="btn btn-outline" onclick="visualizarEventosAgendados()">Ver Eventos Agendados</button>
